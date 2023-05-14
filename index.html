@@ -218,46 +218,46 @@
     <!--js link-->
     <script type="text/javascript" src="js/script.js"></script>
     <script>
-      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-SNE1P2SReY9R1QI3doFOn6hbEvS63hjPaEIQInSj9gC3uMzythe1AVQ5ylWsata0YdZz8AayyQPp/pub?gid=0&single=true&output=csv';
+const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-SNE1P2SReY9R1QI3doFOn6hbEvS63hjPaEIQInSj9gC3uMzythe1AVQ5ylWsata0YdZz8AayyQPp/pub?gid=0&single=true&output=csv';
 
-      fetch(url)
-        .then((response) => response.text())
-        .then((data) => {
-          const rows = data.split('\n');
-          const testimonials = [];
+    fetch(url)
+      .then((response) => response.text())
+      .then((data) => {
+        const rows = data.split('\n');
+        const testimonials = [];
 
-          const headers = rows[0].split(',');
-          rows.splice(0, 1);
+        const headers = rows[0].split(',');
+        rows.splice(0, 1);
 
-          rows.forEach((row) => {
-            const cells = row.split(',');
-            if (cells.length >= 3) {
-              const testimonial = {
-                nama: cells[0].trim(),
-                pekerjaan: cells[1].trim(),
-                isiTestimoni: cells[2].trim(),
-              };
-              testimonials.push(testimonial);
-            }
-          });
+        rows.forEach((row) => {
+          const cells = row.split(',');
+          if (cells.length >= 3) {
+            const testimonial = {
+              nama: cells[0].trim(),
+              pekerjaan: cells[1].trim(),
+              isiTestimoni: cells[2].trim(),
+            };
+            testimonials.push(testimonial);
+          }
+        });
 
-          const testimonialElement = document.querySelector('.testimonial');
-          let i = 0;
+        const testimonialElement = document.querySelector('.testimonial');
+        let i = 0;
 
-          setInterval(() => {
-            const testimonial = testimonials[i];
-            testimonialElement.querySelector('.nama').textContent = testimonial.nama;
-            testimonialElement.querySelector('.pekerjaan').textContent = testimonial.pekerjaan;
-            testimonialElement.querySelector('.isi-testimoni').textContent = testimonial.isiTestimoni;
+        setInterval(() => {
+          const testimonial = testimonials[i];
+          testimonialElement.querySelector('.nama').textContent = testimonial.nama;
+          testimonialElement.querySelector('.pekerjaan').textContent = testimonial.pekerjaan;
+          testimonialElement.querySelector('.isi-testimoni').textContent = testimonial.isiTestimoni;
 
-            i++;
-            if (i >= 10) {
-              // ubah kondisi menjadi i >= 10
-              i = 0;
-            }
-          }, 3000);
-        })
-        .catch((error) => console.log(error));
+          i++;
+          if (i >= 15) {
+            // ubah kondisi menjadi i >= 10
+            i = 0;
+          }
+        }, 2000);
+      })
+      .catch((error) => console.log(error));
     </script>
   </body>
 </html>
