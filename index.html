@@ -1,263 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aris Suratno</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <!--bagian header-->
-    <header class="sticky-header">
-      <a href="#" class="logo"><i class="ri-shield-user-fill"></i><span>Aris Suratno</span></a>
-
-      <ul class="navbar">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#portofolio">Portofolio</a></li>
-      </ul>
-
-      <div class="main">
-        <a href="#profil" class="user"><i class="ri-user-2-fill"></i>Profil/CV</a>
-        <a href="#kontak">Kontak</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-      </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#home" class="logo"><i class="ri-shield-user-fill"></i> Aris Suratno</a>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#portofolio">Portofolio</a>
+                <a href="#profil">Profil</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+            <div class="menu-toggle" id="menu-icon"><i class="bx bx-menu"></i></div>
+        </div>
     </header>
 
-    <!--Bagian Home-->
+    <!-- Home Section -->
     <section class="home" id="home">
-      <div class="home-text">
-        <div class="slide">
-          <span class="one">Hallo</span>
-          <span class="two">Saya</span>
+        <div class="container">
+            <div class="home-content">
+                <h2>Hallo, Saya</h2>
+                <h1>Aris Suratno</h1>
+                <h3>Freelancer <span>Multimedia</span></h3>
+                <p>6+ tahun pengalaman dalam desain grafis, video editing, dan pembuatan website.</p>
+                <div class="btn-group">
+                    <a href="#masukan" class="btn">Masukan</a>
+                    <a href="#" class="btn-outline"><i class="bx bx-play"></i> Lihat Kerjaku</a>
+                </div>
+            </div>
         </div>
-        <h1>Aris Suratno</h1>
-        <h3>Freelancer<span> Multimedia</span></h3>
-        <p>Sudah lebih dari 6+ tahun melayani pelanggan<br />Khususnya dalam bidang multimedia.</p>
-        <div class="button">
-          <a href="#masukan" class="btn">Masukan</a>
-          <a href="#" class="btn2"
-            ><span><i class="bx bx-play"></i></span>Lihat Kerjaku</a
-          >
-        </div>
-      </div>
     </section>
 
-    <!--Bagian Profil-->
+    <!-- Profil Section -->
     <section class="profil" id="profil">
-      <div class="profil-img"><img src="img/profil.jpg" alt="profil aris suratno" /></div>
-      <div class="profil-text">
-        <h2>Profil<span>Ku</span></h2>
-        <h4>Freelancer Multimedia</h4>
-        <p>
-          Saya lulus dari sekolah menengah kejuruan multimedia dengan keterampilan dalam desain grafis, pembuatan website, pengeditan video dan foto, serta multimedia interaktif. Saya mengoperasikan perangkat lunak seperti Corel drow,
-          wordpress, adobe premiere pro dan Adobe Photoshop. Sekarang saya sedang mengejar pendidikan lanjutan dengan jam pendidikan yang fleksibel dan memiliki minat dalam pekerjaan desain grafis. Saya memiliki kemampuan kerja tim yang
-          baik dan komunikasi yang baik dengan klien untuk memastikan setiap proyek desain sesuai dengan kebutuhan dan harapan mereka.
-        </p>
-        <a href="#" class="btn">CV Saya</a>
-      </div>
+        <div class="container">
+            <div class="profil-img"><img src="img/profil.jpg" alt="Profil Aris Suratno"></div>
+            <div class="profil-text">
+                <h2>Profil<span>Ku</span></h2>
+                <h4>Freelancer Multimedia</h4>
+                <p>Saya ahli dalam desain grafis, pembuatan website, dan multimedia interaktif. Saya memiliki komunikasi yang baik dan kemampuan kerja tim untuk memastikan setiap proyek memenuhi kebutuhan klien.</p>
+                <a href="#" class="btn">CV Saya</a>
+            </div>
+        </div>
     </section>
 
-    <!--Bagian Layanan-->
+    <!-- Layanan Section -->
     <section class="services" id="layanan">
-      <div class="main-text">
-        <p>Keahlian Saya</p>
-        <h2><span>Layanan</span>Ku</h2>
-      </div>
-
-      <div class="services-content">
-        <div class="box">
-          <div class="s-icons">
-            <i class="bx bxs-leaf"></i>
-          </div>
-          <h3>Creative Desain</h3>
-          <p>Menawarkan layanan desain grafis yang kreatif, Dari logo, brosur, hingga desain kemasan, kami menggabungkan pengetahuan teknis dan estetika untuk menciptakan desain yang efektif dan memikat.</p>
-          <a href="#" class="read">Lanjut baca</a>
+        <div class="container">
+            <h2>Layanan<span>Ku</span></h2>
+            <div class="services-content">
+                <div class="service-box">
+                    <i class="bx bxs-paint"></i>
+                    <h3>Creative Desain</h3>
+                    <p>Layanan desain grafis profesional dari logo hingga kemasan.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Simpel Web Development</h3>
+                    <p>Pembuatan website sederhana yang sesuai kebutuhan Anda.</p>
+                </div>
+                <div class="service-box">
+                    <i class="bx bx-desktop"></i>
+                    <h3>Remote Desktop</h3>
+                    <p>Layanan remote untuk meningkatkan produktivitas Anda.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="box">
-          <div class="s-icons">
-            <i class="bx bx-code-alt"></i>
-          </div>
-          <h3>Simpel Web Development</h3>
-          <p>Menawarkan layanan pembuatan website simpel yang mudah digunakan dan mudah diakses oleh pengunjung. Dengan fokus pada kebutuhan Anda, kami menyediakan solusi website yang terjangkau.</p>
-          <a href="#" class="read">Lanjut baca</a>
-        </div>
-
-        <div class="box">
-          <div class="s-icons">
-            <i class="bx bx-desktop"></i>
-          </div>
-          <h3>Remote Desktop</h3>
-          <p>
-            Menawarkan layanan Remote Desktop, layanan ini dapat membantu Anda memperbarui software, atau mengakses data penting dari mana saja. Serta dapat mempercepat produktivitas Anda ketika sedang bepergian atau bekerja dari jarak
-            jauh.
-          </p>
-          <a href="#" class="read">Lanjut baca</a>
-        </div>
-      </div>
     </section>
 
-    <!--Bagian portofolio-->
-    <section class="prtofolio" id="portofolio">
-      <div class="main-text">
-        <p>Portofolio</p>
-        <h2><span>Projek</span> Terbaru</h2>
-      </div>
-
-      <div class="portofolio-content">
-        <div class="row">
-          <img src="img/portofolio1.jpg" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
+    <!-- Portofolio Section -->
+    <section class="portfolio" id="portofolio">
+        <div class="container">
+            <h2>Portofolio<span>Ku</span></h2>
+            <div class="portfolio-content">
+                <div class="portfolio-item">
+                    <img src="img/portofolio1.jpg" alt="Projek 1">
+                    <div class="overlay">
+                        <h4>Desain Grafis</h4>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/portofolio2.jpg" alt="Projek 2">
+                    <div class="overlay">
+                        <h4>Desain Grafis</h4>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <!-- Tambahkan item lainnya sesuai kebutuhan -->
+            </div>
         </div>
-
-        <div class="row">
-          <img src="img/portofolio2.jpg" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio3.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio4.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio5.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="https://sdnjatibeningbaru5.schjabali.repl.co/"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio6.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!--Bagian Kontak-->
-
+    <!-- Kontak Section -->
     <section class="contact" id="kontak">
-      <div class="contact-text">
-        <h2>Kontak <span>Saya!</span></h2>
-        <h4>Ada projek kita bicarakan dahulu</h4>
-        <p>
-          Terima kasih telah mengunjungi website saya! Jika Anda tertarik untuk bekerja sama dengan saya atau memiliki pertanyaan, silakan hubungi saya melalui formulir kontak di bawah ini. Saya senang mendengar tentang proyek Anda dan siap
-          membantu Anda mencapai tujuan bisnis Anda. Saya akan merespons secepat mungkin dan berusaha memberikan solusi yang paling sesuai dengan kebutuhan Anda. Anda juga dapat menghubungi saya melalui email atau nomor telepon yang
-          tercantum di bawah ini. Terima kasih atas perhatiannya dan saya berharap dapat bekerja sama dengan Anda untuk menciptakan solusi yang sukses dan memuaskan
-        </p>
-        <div class="list">
-          <li><a href="#">+62 857-4694-0238</a></li>
-          <li><a href="#">arissuratno2000@gmail.com</a></li>
-          <li><a href="#">Like Share & Subscribe</a></li>
+        <div class="container">
+            <h2>Kontak<span>Saya</span></h2>
+            <p>Hubungi saya untuk membahas proyek Anda!</p>
+            <div class="contact-info">
+                <p><i class="bx bxl-whatsapp"></i> +62 857-4694-0238</p>
+                <p><i class="bx bx-envelope"></i> arissuratno2000@gmail.com</p>
+            </div>
         </div>
-
-        <div class="contact-icon">
-          <a href="#"><i class="bx bxl-whatsapp"></i></a>
-          <a href="#"><i class="bx bxl-instagram"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
-          <a href="#"><i class="bx bx-git-repo-forked"></i></a>
-        </div>
-      </div>
-
-      <div class="testimonial-container" id="masukan">
-        <div class="testimonial">
-          <h3 class="nama"></h3>
-          <p class="pekerjaan"></p>
-          <p class="isi-testimoni"></p>
-          <a href="https://forms.gle/g6x6QJMnaudt86Kg7" class="btn3">Isi Masukan</a>
-        </div>
-      </div>
     </section>
 
-    <!--bagian footer-->
-    <section class="end">
-      <div class="last-text">
-        <p>Copyright © 2023 by Aris Suratno All Rights Reserved.</p>
-      </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Aris Suratno. All rights reserved.</p>
+        </div>
+    </footer>
 
-      <div class="top">
-        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-      </div>
-    </section>
-
-    <!--js link-->
-    <script type="text/javascript" src="js/script.js"></script>
-    <script>
-const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-SNE1P2SReY9R1QI3doFOn6hbEvS63hjPaEIQInSj9gC3uMzythe1AVQ5ylWsata0YdZz8AayyQPp/pub?gid=0&single=true&output=csv';
-
-    fetch(url)
-      .then((response) => response.text())
-      .then((data) => {
-        const rows = data.split('\n');
-        const testimonials = [];
-
-        const headers = rows[0].split(',');
-        rows.splice(0, 1);
-
-        rows.forEach((row) => {
-          const cells = row.split(',');
-          if (cells.length >= 3) {
-            const testimonial = {
-              nama: cells[0].trim(),
-              pekerjaan: cells[1].trim(),
-              isiTestimoni: cells[2].trim(),
-            };
-            testimonials.push(testimonial);
-          }
-        });
-
-        const testimonialElement = document.querySelector('.testimonial');
-        let i = 0;
-
-        setInterval(() => {
-          const testimonial = testimonials[i];
-          testimonialElement.querySelector('.nama').textContent = testimonial.nama;
-          testimonialElement.querySelector('.pekerjaan').textContent = testimonial.pekerjaan;
-          testimonialElement.querySelector('.isi-testimoni').textContent = testimonial.isiTestimoni;
-
-          i++;
-          if (i >= 15) {
-            // ubah kondisi menjadi i >= 10
-            i = 0;
-          }
-        }, 2000);
-      })
-      .catch((error) => console.log(error));
-    </script>
-  </body>
+    <script src="js/script.js"></script>
+</body>
 </html>
