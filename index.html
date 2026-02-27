@@ -1,263 +1,649 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="id">
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aris Suratno</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Aris Suratno | Tech, Admin & Creative</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <!--bagian header-->
-    <header class="sticky-header">
-      <a href="#" class="logo"><i class="ri-shield-user-fill"></i><span>Aris Suratno</span></a>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-      <ul class="navbar">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#portofolio">Portofolio</a></li>
-      </ul>
+    <style>
+        /* Variabel Warna Modern (Clean & Professional) */
+        :root {
+            --primary-color: #2563eb; /* Biru Profesional */
+            --secondary-color: #1e293b; /* Teks Gelap */
+            --bg-color: #f8fafc; /* Background Terang */
+            --white: #ffffff;
+            --text-light: #64748b;
+            --transition: all 0.3s ease;
+        }
 
-      <div class="main">
-        <a href="#profil" class="user"><i class="ri-user-2-fill"></i>Profil/CV</a>
-        <a href="#kontak">Kontak</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-      </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+        }
+
+        /* HEADER & NAVBAR */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--primary-color);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar a {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .navbar a:hover, .navbar a.active {
+            color: var(--primary-color);
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        #menu-icon {
+            font-size: 28px;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: none;
+        }
+
+        /* SECTION PADDING */
+        section {
+            padding: 100px 8% 60px;
+        }
+
+        /* HOME / HERO */
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to bottom, #eff6ff, var(--bg-color));
+        }
+
+        .home-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin: 15px 0;
+            color: var(--secondary-color);
+        }
+
+        .home-text h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* PROFIL */
+        .profil {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .profil-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .profil-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .profil-text h2 span {
+            color: var(--primary-color);
+        }
+
+        .profil-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .profil-text p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* LAYANAN (SERVICES) */
+        .main-text {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .main-text p {
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .main-text h2 {
+            font-size: 2.5rem;
+        }
+
+        .services-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .box {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: var(--transition);
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .s-icons {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* PORTOFOLIO */
+        .portofolio-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .row {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+
+        .row img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0,0,0,0.1), var(--primary-color));
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 40px;
+            transition: height 0.5s ease;
+        }
+
+        .row:hover img {
+            transform: scale(1.1);
+        }
+
+        .row:hover .layer {
+            height: 100%;
+        }
+
+        .layer h5 {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .layer p {
+            color: var(--white);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .layer a {
+            background: var(--white);
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        /* KONTAK & TESTIMONI */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            margin-bottom: 50px;
+        }
+
+        .contact-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-text h4 {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .contact-text p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-icon a {
+            width: 45px;
+            height: 45px;
+            background: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .contact-icon a:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .testimonial-container {
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .testimonial h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .testimonial .pekerjaan {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .testimonial .isi-testimoni {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            min-height: 80px;
+        }
+
+        /* FOOTER */
+        .end {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .end p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .top a {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 1.5rem;
+        }
+
+        /* RESPONSIVE DESIGN (MOBILE) */
+        @media (max-width: 900px) {
+            #menu-icon {
+                display: block;
+            }
+            .navbar {
+                position: absolute;
+                top: 100%;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background: var(--white);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 50px 20px;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0,0,0,0.05);
+            }
+            .navbar.open {
+                right: 0;
+            }
+            .profil, .contact {
+                grid-template-columns: 1fr;
+            }
+            .home-text h1 {
+                font-size: 2.5rem;
+            }
+            .contact {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="ri-shield-user-fill"></i><span>Aris Suratno</span></a>
+        <ul class="navbar">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+        </ul>
+        <div class="main">
+            <a href="#kontak" class="btn-primary">Hubungi Saya</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
 
-    <!--Bagian Home-->
     <section class="home" id="home">
-      <div class="home-text">
-        <div class="slide">
-          <span class="one">Hallo</span>
-          <span class="two">Saya</span>
+        <div class="home-text">
+            <h3>Halo, Saya</h3>
+            <h1>Aris Suratno</h1>
+            <h3>Tech Admin & <span>Creative Digital</span></h3>
+            <p>Lulusan Sarjana Pendidikan yang fokus mengintegrasikan manajemen data, dukungan operasional IT, dan desain multimedia untuk meningkatkan efisiensi kerja instansi.</p>
+            <div class="button-group">
+                <a href="#portofolio" class="btn-primary">Lihat Karya</a>
+                <a href="#profil" class="btn-primary" style="background: var(--white); color: var(--secondary-color); border: 1px solid var(--text-light);">Profil Saya</a>
+            </div>
         </div>
-        <h1>Aris Suratno</h1>
-        <h3>Freelancer<span> Multimedia</span></h3>
-        <p>Sudah lebih dari 6+ tahun melayani pelanggan<br />Khususnya dalam bidang multimedia.</p>
-        <div class="button">
-          <a href="#masukan" class="btn">Masukan</a>
-          <a href="#" class="btn2"
-            ><span><i class="bx bx-play"></i></span>Lihat Kerjaku</a
-          >
-        </div>
-      </div>
     </section>
 
-    <!--Bagian Profil-->
     <section class="profil" id="profil">
-      <div class="profil-img"><img src="img/profil.jpg" alt="profil aris suratno" /></div>
-      <div class="profil-text">
-        <h2>Profil<span>Ku</span></h2>
-        <h4>Freelancer Multimedia</h4>
-        <p>
-          Saya lulus dari sekolah menengah kejuruan multimedia dengan keterampilan dalam desain grafis, pembuatan website, pengeditan video dan foto, serta multimedia interaktif. Saya mengoperasikan perangkat lunak seperti Corel drow,
-          wordpress, adobe premiere pro dan Adobe Photoshop. Sekarang saya sedang mengejar pendidikan lanjutan dengan jam pendidikan yang fleksibel dan memiliki minat dalam pekerjaan desain grafis. Saya memiliki kemampuan kerja tim yang
-          baik dan komunikasi yang baik dengan klien untuk memastikan setiap proyek desain sesuai dengan kebutuhan dan harapan mereka.
-        </p>
-        <a href="#" class="btn">CV Saya</a>
-      </div>
+        <div class="profil-img">
+            <img src="img/profil.jpg" alt="Aris Suratno - Operator Data & Freelancer" />
+        </div>
+        <div class="profil-text">
+            <h2>Tentang <span>Saya</span></h2>
+            <h4>Spesialis Data, IT Support & Desainer Freelance</h4>
+            <p>
+                Saya adalah Sarjana Pendidikan (S1) dengan pengalaman lebih dari 5 tahun di bidang operasional data (Dapodik), administrasi instansi, dan dukungan teknologi. Saya mengawali karir dari lapangan hingga dipercaya mengelola data krusial, membuktikan kedisiplinan dan adaptabilitas saya.
+            </p>
+            <p>
+                Memiliki latar belakang SMK Multimedia, saya terbiasa menggunakan alat bantu digital seperti AI (untuk optimasi alur kerja), Google Workspace, PHP dasar, hingga perangkat desain grafis (Canva, CorelDRAW). Saya siap memberikan solusi digital yang praktis, rapi, dan tepat sasaran.
+            </p>
+            <a href="#" class="btn-primary">Unduh CV Saya</a>
+        </div>
     </section>
 
-    <!--Bagian Layanan-->
     <section class="services" id="layanan">
-      <div class="main-text">
-        <p>Keahlian Saya</p>
-        <h2><span>Layanan</span>Ku</h2>
-      </div>
-
-      <div class="services-content">
-        <div class="box">
-          <div class="s-icons">
-            <i class="bx bxs-leaf"></i>
-          </div>
-          <h3>Creative Desain</h3>
-          <p>Menawarkan layanan desain grafis yang kreatif, Dari logo, brosur, hingga desain kemasan, kami menggabungkan pengetahuan teknis dan estetika untuk menciptakan desain yang efektif dan memikat.</p>
-          <a href="#" class="read">Lanjut baca</a>
+        <div class="main-text">
+            <p>Keahlian Utama</p>
+            <h2><span>Layanan</span> Profesional</h2>
         </div>
 
-        <div class="box">
-          <div class="s-icons">
-            <i class="bx bx-code-alt"></i>
-          </div>
-          <h3>Simpel Web Development</h3>
-          <p>Menawarkan layanan pembuatan website simpel yang mudah digunakan dan mudah diakses oleh pengunjung. Dengan fokus pada kebutuhan Anda, kami menyediakan solusi website yang terjangkau.</p>
-          <a href="#" class="read">Lanjut baca</a>
-        </div>
+        <div class="services-content">
+            <div class="box">
+                <div class="s-icons"><i class="bx bx-data"></i></div>
+                <h3>Manajemen Data & Administrasi</h3>
+                <p>Pengelolaan database (Dapodik/Sistem Internal), digitalisasi dokumen, dan optimasi laporan menggunakan Microsoft Excel serta bantuan AI untuk efisiensi.</p>
+            </div>
 
-        <div class="box">
-          <div class="s-icons">
-            <i class="bx bx-desktop"></i>
-          </div>
-          <h3>Remote Desktop</h3>
-          <p>
-            Menawarkan layanan Remote Desktop, layanan ini dapat membantu Anda memperbarui software, atau mengakses data penting dari mana saja. Serta dapat mempercepat produktivitas Anda ketika sedang bepergian atau bekerja dari jarak
-            jauh.
-          </p>
-          <a href="#" class="read">Lanjut baca</a>
+            <div class="box">
+                <div class="s-icons"><i class="bx bx-laptop"></i></div>
+                <h3>IT Support & Digitalisasi</h3>
+                <p>Pendampingan adaptasi teknologi (LMS/Google Forms), instalasi jaringan dasar, hingga troubleshooting perangkat keras untuk kelancaran operasional.</p>
+            </div>
+
+            <div class="box">
+                <div class="s-icons"><i class="bx bxs-palette"></i></div>
+                <h3>Desain Grafis Multimedia</h3>
+                <p>Pembuatan media informasi, banner, spanduk promosi, hingga ilustrasi digital dengan sentuhan desain yang modern dan komunikatif.</p>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!--Bagian portofolio-->
-    <section class="prtofolio" id="portofolio">
-      <div class="main-text">
-        <p>Portofolio</p>
-        <h2><span>Projek</span> Terbaru</h2>
-      </div>
-
-      <div class="portofolio-content">
-        <div class="row">
-          <img src="img/portofolio1.jpg" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
+    <section class="portofolio" id="portofolio">
+        <div class="main-text">
+            <p>Rekam Jejak</p>
+            <h2><span>Portofolio</span> & Proyek</h2>
         </div>
 
-        <div class="row">
-          <img src="img/portofolio2.jpg" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio3.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio4.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio5.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="https://sdnjatibeningbaru5.schjabali.repl.co/"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <img src="img/portofolio6.png" alt="projek1" />
-          <div class="layer">
-            <h5>Desain Grafis</h5>
-            <p>Lihat pembaharuan karya-karya desain dari saya.</p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
-      </div>
+        <div class="portofolio-content">
+            <div class="row">
+                <img src="img/portofolio1.jpg" alt="Proyek IT" />
+                <div class="layer">
+                    <h5>Sistem Administrasi Digital</h5>
+                    <p>Penerapan Google Workspace & Form untuk instansi.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="img/portofolio2.jpg" alt="Proyek Desain" />
+                <div class="layer">
+                    <h5>Desain Banner Promosi</h5>
+                    <p>Desain visual komunikasi untuk acara sekolah & klien.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="img/portofolio3.png" alt="Proyek Web" />
+                <div class="layer">
+                    <h5>Web Landing Page</h5>
+                    <p>Pembuatan web landing page sederhana untuk publikasi.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            </div>
     </section>
-
-    <!--Bagian Kontak-->
 
     <section class="contact" id="kontak">
-      <div class="contact-text">
-        <h2>Kontak <span>Saya!</span></h2>
-        <h4>Ada projek kita bicarakan dahulu</h4>
-        <p>
-          Terima kasih telah mengunjungi website saya! Jika Anda tertarik untuk bekerja sama dengan saya atau memiliki pertanyaan, silakan hubungi saya melalui formulir kontak di bawah ini. Saya senang mendengar tentang proyek Anda dan siap
-          membantu Anda mencapai tujuan bisnis Anda. Saya akan merespons secepat mungkin dan berusaha memberikan solusi yang paling sesuai dengan kebutuhan Anda. Anda juga dapat menghubungi saya melalui email atau nomor telepon yang
-          tercantum di bawah ini. Terima kasih atas perhatiannya dan saya berharap dapat bekerja sama dengan Anda untuk menciptakan solusi yang sukses dan memuaskan
-        </p>
-        <div class="list">
-          <li><a href="#">+62 857-4694-0238</a></li>
-          <li><a href="#">arissuratno2000@gmail.com</a></li>
-          <li><a href="#">Like Share & Subscribe</a></li>
+        <div class="contact-text">
+            <h2>Mari <span>Berkolaborasi!</span></h2>
+            <h4>Terbuka untuk peluang kerja dan proyek lepas.</h4>
+            <p>
+                Baik itu kebutuhan pengelolaan data administrasi, pendampingan sistem IT, maupun pengerjaan desain grafis, saya siap membantu memberikan solusi terbaik untuk Anda. Silakan hubungi saya lewat kontak di bawah ini.
+            </p>
+            
+            <div class="contact-icon">
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                <a href="#"><i class="bx bx-envelope"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+                <a href="#"><i class="bx bxl-github"></i></a>
+            </div>
         </div>
 
-        <div class="contact-icon">
-          <a href="#"><i class="bx bxl-whatsapp"></i></a>
-          <a href="#"><i class="bx bxl-instagram"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
-          <a href="#"><i class="bx bx-git-repo-forked"></i></a>
+        <div class="testimonial-container" id="masukan">
+            <div class="testimonial">
+                <h3 class="nama">Memuat...</h3>
+                <p class="pekerjaan">Mohon tunggu</p>
+                <p class="isi-testimoni">Sedang mengambil data testimoni klien...</p>
+                <br>
+                <a href="https://forms.gle/g6x6QJMnaudt86Kg7" target="_blank" class="btn-primary" style="font-size: 0.9rem;">Beri Masukan</a>
+            </div>
         </div>
-      </div>
-
-      <div class="testimonial-container" id="masukan">
-        <div class="testimonial">
-          <h3 class="nama"></h3>
-          <p class="pekerjaan"></p>
-          <p class="isi-testimoni"></p>
-          <a href="https://forms.gle/g6x6QJMnaudt86Kg7" class="btn3">Isi Masukan</a>
-        </div>
-      </div>
     </section>
 
-    <!--bagian footer-->
     <section class="end">
-      <div class="last-text">
-        <p>Copyright © 2023 by Aris Suratno All Rights Reserved.</p>
-      </div>
-
-      <div class="top">
-        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-      </div>
+        <p>© 2026 Aris Suratno. Spesialis Data & Kreatif Digital.</p>
+        <div class="top">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
     </section>
 
-    <!--js link-->
-    <script type="text/javascript" src="js/script.js"></script>
     <script>
-const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-SNE1P2SReY9R1QI3doFOn6hbEvS63hjPaEIQInSj9gC3uMzythe1AVQ5ylWsata0YdZz8AayyQPp/pub?gid=0&single=true&output=csv';
+        // Toggle Menu Mobile
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
 
-    fetch(url)
-      .then((response) => response.text())
-      .then((data) => {
-        const rows = data.split('\n');
-        const testimonials = [];
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        };
 
-        const headers = rows[0].split(',');
-        rows.splice(0, 1);
+        // Script Testimoni (Tetap menggunakan punya lo)
+        const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-SNE1P2SReY9R1QI3doFOn6hbEvS63hjPaEIQInSj9gC3uMzythe1AVQ5ylWsata0YdZz8AayyQPp/pub?gid=0&single=true&output=csv';
 
-        rows.forEach((row) => {
-          const cells = row.split(',');
-          if (cells.length >= 3) {
-            const testimonial = {
-              nama: cells[0].trim(),
-              pekerjaan: cells[1].trim(),
-              isiTestimoni: cells[2].trim(),
-            };
-            testimonials.push(testimonial);
-          }
-        });
+        fetch(url)
+            .then((response) => response.text())
+            .then((data) => {
+                const rows = data.split('\n');
+                const testimonials = [];
+                rows.splice(0, 1);
 
-        const testimonialElement = document.querySelector('.testimonial');
-        let i = 0;
+                rows.forEach((row) => {
+                    const cells = row.split(',');
+                    if (cells.length >= 3) {
+                        const testimonial = {
+                            nama: cells[0].trim(),
+                            pekerjaan: cells[1].trim(),
+                            isiTestimoni: cells[2].trim(),
+                        };
+                        testimonials.push(testimonial);
+                    }
+                });
 
-        setInterval(() => {
-          const testimonial = testimonials[i];
-          testimonialElement.querySelector('.nama').textContent = testimonial.nama;
-          testimonialElement.querySelector('.pekerjaan').textContent = testimonial.pekerjaan;
-          testimonialElement.querySelector('.isi-testimoni').textContent = testimonial.isiTestimoni;
+                const testimonialElement = document.querySelector('.testimonial');
+                let i = 0;
 
-          i++;
-          if (i >= 15) {
-            // ubah kondisi menjadi i >= 10
-            i = 0;
-          }
-        }, 2000);
-      })
-      .catch((error) => console.log(error));
+                if(testimonials.length > 0) {
+                    setInterval(() => {
+                        const testimonial = testimonials[i];
+                        testimonialElement.querySelector('.nama').textContent = testimonial.nama;
+                        testimonialElement.querySelector('.pekerjaan').textContent = testimonial.pekerjaan;
+                        testimonialElement.querySelector('.isi-testimoni').textContent = `"${testimonial.isiTestimoni}"`;
+
+                        i++;
+                        if (i >= testimonials.length) i = 0;
+                    }, 4000); // Diubah jadi 4 detik biar bacanya gak buru-buru
+                }
+            })
+            .catch((error) => console.log('Gagal memuat testimoni:', error));
     </script>
-  </body>
+</body>
 </html>
